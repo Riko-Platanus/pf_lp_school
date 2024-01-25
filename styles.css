@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #24292e;
+    font-family: "Sawarabi Gothic"; 
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto 130px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+}
+
+.site-title {
+    line-height: 1px;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.site-title a {
+    display: block;
+    color: #24292e;
+}
+
+.sec-title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+/* header */
+#header {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 4%;
+    height: 120px;
+}
+
+#header ul {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+#header ul li {
+    font-size: 1.2rem;
+    margin-left: 30px;
+}
+
+#header ul li a {
+    color: #24292e;
+    transition: all 0.3s;
+}
+
+#header ul li a:hover {
+    opacity: 0.5;
+}
+
+#header li img.icon {
+    width: 240px;
+}
+
+/* main */
+#main {
+    margin-bottom: 80px;
+}
+
+#main img {
+    width: 100%;
+    max-width: 1920px;
+    height:600px;
+    object-fit: cover;
+}
+
+/* about */
+#about ul{
+    margin-bottom: 30px;
+}
+
+#about ul li {
+    margin-bottom: 3px;
+}
+
+#about ul li:first-child {
+    margin-bottom: 30px;
+}
+
+#about p {
+    text-align: justify;
+}
+
+#place {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#place .wrapper_place {
+    margin: 15px 4%;
+}
+
+#recruit_btn {
+    width: 400px;
+    background: #ef7c1d;
+    border-radius: 30px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+#recruit_btn:hover {
+    opacity: 0.7;
+}
+
+#recruit_btn .recruit_title {
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+#recruit_btn p {
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+/* course */
+#course_list {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#course_list .course {
+    margin: 15px 4%;
+}
+
+/* news */
+#news dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #c8c8c8;
+    margin-bottom: 20px;
+}
+
+#news dt {
+    width: 20%;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 15px;
+}
+
+#news dd {
+    width: 80%;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 15px;
+}
+
+/* contact */
+#contact p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact dl {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#contact dt {
+    width: 15%;
+    margin-bottom: 10px;
+}
+
+#contact dd {
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+#contact dd input,
+#contact dd textarea {
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+}
+
+#contact dd textarea {
+    height: 10rem;
+}
+
+#contact .button {
+    text-align: center;
+}
+
+#contact .button input {
+    border: 1px solid #24292e;
+    width: 200px;
+    padding: 15px 0;
+    background-color: #24292e;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#contact .button input:hover {
+    background-color: #fff;
+    color: #24292e;
+}
+
+/* sp */
+@media screen and (max-width: 600px) {
+    .site-title {
+        margin-top: 20px;
+    }
+
+    /* header */
+    #header {
+        max-width: 100%;
+        flex-direction: column;
+        height: auto;
+        line-height: 40px;
+        margin-top: 20px;
+    }
+
+    #header li {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+
+    #header li img.icon {
+        width: 20px;
+        margin-top: 15px;
+    }
+    /* works */
+    #works ul {
+        flex-direction: column;        
+    }
+
+    #works ul li {
+        width: 100%;
+    }
+    /* news */
+    #news dl {
+        flex-direction: column;
+    }
+
+    #news dt {
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    #news dd {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    /* contact */
+    #contact dl {
+        flex-direction: column;
+    }
+
+    #contact dt {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #contact dd {
+        width: 100%;
+    }
+}
