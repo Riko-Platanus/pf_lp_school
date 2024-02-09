@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LPの練習">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="send-mail.js"></script>
+    <script src="header-html.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
     <title>ぷらたなす塾</title>
 </head>
+
 <body>
     <!-- Header -->
     <header id="header">
@@ -22,28 +26,26 @@
                 <li><a href="#achieve">卒業生進学先</a></li>
                 <li><a href="#contact">資料請求</a></li>
                 <li>
-                    <a 
-                    href="#" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                         <img src="./images/tel.png" alt="Tel" class="icon">
                     </a>
                 </li>
             </ul>
         </nav>
-    </header> 
+    </header>
+
     <!-- Main -->
     <div id="main">
         <picture>
-            <img src="https://user0514.cdnw.net/shared/img/thumb/fk-PAUI0170_TP_V.jpg" alt=" "/>
+            <img src="https://user0514.cdnw.net/shared/img/thumb/fk-PAUI0170_TP_V.jpg" alt=" " />
         </picture>
-    </div>     
+    </div>
 
     <!-- about -->
     <section id="about" class="wrapper">
         <h2 class="sec-title">方針</h2>
+        <img src="./images/about.jpg" alt="" class="staff">
         <ul>
-            <li>ぷらたなす塾</li>
             <li>中学受験・高校受験・大学受験に向けて、我々がサポートします。</li>
             <li>東京都多摩エリアのみに開校しています。</li>
             <li>中学・高校は近隣校の情報を調べ、一人ひとりの課題を模索していきます。</li>
@@ -68,8 +70,8 @@
 
         <div id="recruit_btn">
             <a href="#" target="_blank">
-            <p class="recruit_title">採用情報</p>
-            <p>塾講師・事務員を募集しています。</p>
+                <p class="recruit_title">採用情報</p>
+                <p>塾講師・事務員を募集しています。</p>
             </a>
         </div>
     </section>
@@ -79,29 +81,73 @@
         <h2 class="sec-title">コース一覧</h2>
         <div id="course_list">
             <div class="course">
-                <p>集団コース</p>
-                <p>教室にて、30名程度が集まり授業を受ける形式です。</p>
-                <p>月8000円</p>
+                <p class="class-name">自習コース</p>
+                <div class="course-method">
+                    <img src="./images/course3.jpg" alt="自習コース">
+                    <p>学習の進め方も、出席日も自由。質問時のみ講師が解説します。</p>
+                    <p class="money">4,000～6,000円/月</p>
+                </div>
             </div>
             <div class="course">
-                <p>個人コース</p>
-                <p>講師とマンツーマンで、個別に学習を進める形式です。</p>
-                <p>月10000円</p>
+                <p class="class-name">集団コース</p>
+                <div class="course-method">
+                    <img src="./images/course1.jpg" alt="集団コース">
+                    <p>教室にて、30名程度が集まり授業を受ける形式です。</p>
+                    <p class="money">6,000～8,000円/月</p>
+                </div>
             </div>
             <div class="course">
-                <p>自習コース</p>
-                <p>学習の進め方も、出席日も自由。質問時のみ講師が解説します。</p>
-                <p>月5000円</p>
+                <p class="class-name">個人コース</p>
+                <div class="course-method">
+                    <img src="./images/course2.jpg" alt="個人コース">
+                    <p>講師とマンツーマンで、個別に学習を進める形式です。</p>
+                    <p class="money">10,000～14,000円/月</p>
+                </div>
             </div>
+        </div>
     </section>
 
     <!-- Achieve -->
     <section id="achieve" class="wrapper">
         <h2 class="sec-title">卒業生進学先</h2>
-        <ul>
-            <li><img src="./images/person1.jpg" alt="person1"></li>
-            <li><img src="./images/person2.jpg" alt="person2"></li>
-            <li><img src="./images/person3.jpg" alt="person3"></li>
+        <ul id="achieve-list">
+            <li class="achieve-person">
+                <img src="./images/person1.jpg" alt="person1" class="person">
+                <div class="school-name">
+                    <span><img src="./images/passed-stamp.png" alt="" class="stamp"></span>
+                    <h2>日比谷高校</h2>
+                </div>
+                <div class="person-course">
+                    <span class="btn">受講コース</span>
+                    <p>集団コース</p>
+                </div>
+                <p class="comment">Y・Sさん<br>一人で勉強しているとどうしても気が散ってしまいますが、教室で勉強していると周囲の仲間と切磋琢磨して、どんどん勉強を進めるようになりました。<br>気付いた時には、志望校合格圏内まで成績も上がり、無事合格することができました。
+                </p>
+            </li>
+            <li class="achieve-person">
+                <img src="./images/person2.jpg" alt="person2" class="person">
+                <div class="school-name">
+                    <span><img src="./images/passed-stamp.png" alt="" class="stamp"></span>
+                    <h2>早稲田大学<br><span style="font-size: 0.7em;">経済学部</span></h2>
+                </div>
+                <div class="person-course">
+                    <span class="btn">受講コース</span>
+                    <p>個人コース</p>
+                </div>
+                <p class="comment">K・Oさん<br>マンツーマンで自分のペースに合わせて勉強ができました。つまづく部分では先生に教えていただいたおかげで、苦手を克服できました。<br>ぷらたなす塾に通う前はE判定だった志望校も、受験前にはB判定になり、おかげ様で合格することができました。</p>
+            </li>
+            <li class="achieve-person">
+                <img src="./images/person3.jpg" alt="person3" class="person">
+                <div class="school-name">
+                    <span><img src="./images/passed-stamp.png" alt="" class="stamp"></span>
+                    <h2>学習院大学<br>附属中学校</h2>
+                </div>
+                <div class="person-course">
+                    <span class="btn">受講コース</span>
+                    <p>自習コース</p>
+                </div>
+                <p class="comment">R・Iさん<br>幼い兄弟がいるので、家では静かに勉強する環境が整えられませんでしたが、ぷらたなす塾で勉強する場所を確保できました。<br>一人では乗り越えられない壁にぶつかっても、アドバイスをしてくれる先生が近くにいたので、安心して勉強することができました。</p>
+            </li>
         </ul>
     </section>
 
@@ -110,22 +156,33 @@
         <h2 class="sec-title">資料請求</h2>
         <p>下記より資料請求を受け付けております。</p>
         <form action="#" method="post">
-            <dl>
-                <dt><label for="name">お子様のお名前</label></dt>
-                <dd><input type="text" id="name"></dd>
-                <dt><label for="name">おこさまのおなまえ</label></dt>
-                <dd><input type="text" id="name"></dd>
-                <dt><label for="name">お子様の学年</label></dt>
-                <dd><input type="text" id="number"></dd>
+            <dl class="form-list">
+                <dt><label for="name">お子様の名前</label></dt>
+                <dd class="name-box">
+                    <input type="text" id="last_name" placeholder="例）相田">
+                    <input type="text" id="first_name" placeholder="例）太郎">
+                </dd>
+                <dt><label for="rubi">おこさまのなまえ</label></dt>
+                <dd class="name-box">
+                    <input type="text" id="last_name" placeholder="例）あいだ">
+                    <input type="text" id="first_name" placeholder="例）たろう">
+                </dd>
+                <dt><label for="grade">お子様の学年</label></dt>
+                <dd><input type="text" id="number" placeholder="例）小学校６年生"></dd>
                 <dt><label for="email">メールアドレス</label></dt>
-                <dd><input type="email" id="email"></dd>
-                <dt><label for="email">請求する資料内容</label></dt>
-                <dd><input type="" id=""></dd>
-                <dt><label for="ncontent">ご質問</label></dt>
-                <dd><textarea id="content" cols="30" rows="10"></textarea></dd>
+                <dd><input type="email" id="email" placeholder="例）example@mail.com"></dd>
+                <dt><label for="content">ご質問ほか</label></dt>
+                <dd><textarea id="content" cols="30" rows="10" placeholder="気になることや要望・ご質問があれば入力してください。"></textarea></dd>
             </dl>
             <div class="button"><input type="submit" value="送信"></div>
         </form>
+        <div id="message" class="hidden">送信完了しました。</div>
     </section>
+
+    <!-- footer -->
+    <footer id="footer">
+        <p id="company"></p>株式会社プラタナス</p>
+    </footer>
 </body>
+
 </html>

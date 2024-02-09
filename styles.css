@@ -1,12 +1,11 @@
 @charset "UTF-8";
-
 html {
     font-size: 100%;
 }
 
 body {
     color: #24292e;
-    font-family: "Sawarabi Gothic"; 
+    font-family: "Sawarabi Gothic";
 }
 
 a {
@@ -27,7 +26,7 @@ li {
 }
 
 .wrapper {
-    width: 960px;
+    width: 80%;
     margin: 0 auto 130px auto;
     font-size: 0.9rem;
     padding: 0 4%;
@@ -50,15 +49,27 @@ li {
     margin-bottom: 65px;
 }
 
+
 /* header */
+
 #header {
-    max-width: 100%;
+    width: 100%;
+    height: 80px;
+    z-index: 101;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 4%;
-    height: 120px;
+}
+
+#header h1 {
+    margin: 0;
+}
+
+#header nav {
+    margin-left: auto;
 }
 
 #header ul {
@@ -85,21 +96,38 @@ li {
     width: 240px;
 }
 
+#header.scrolled {
+    background-color: #f8f8f8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 /* main */
+
 #main {
     margin-bottom: 80px;
 }
 
 #main img {
+    margin-top: 80px;
     width: 100%;
     max-width: 1920px;
-    height:600px;
+    height: 600px;
     object-fit: cover;
 }
 
+
 /* about */
-#about ul{
+
+#about .staff {
+    display: block;
+    width: 60%;
+    margin: 0 auto 20px auto;
+}
+
+#about ul {
     margin-bottom: 30px;
+    margin-left: 4%;
 }
 
 #about ul li {
@@ -148,63 +176,154 @@ li {
     color: #fff;
 }
 
+
 /* course */
+
+#course {
+    width: 100%;
+}
+
 #course_list {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
 }
 
 #course_list .course {
-    margin: 15px 4%;
+    width: 32%;
+    margin: 2%;
+    box-shadow: 0px 5px 12px #CAD4E2, -6px -6px 12px #FFF;
 }
 
-/* news */
-#news dl {
-    display: flex;
-    flex-wrap: wrap;
-    border-top: 1px solid #c8c8c8;
+#course_list .class-name {
+    background: #27257b;
+    color: #fff;
+    text-align: center;
+    font-size: 2.2em;
+    padding: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+}
+
+#course_list .course-method {
+    background: #ffffffe8;
+    color: #4a4949;
+    padding: 12px;
+}
+
+#course_list .money {
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#course img {
+    display: block;
+    width: fit-content;
     margin-bottom: 20px;
 }
 
-#news dt {
-    width: 20%;
-    border-bottom: 1px solid #c8c8c8;
-    padding: 15px;
+
+/* achieve */
+
+#achieve ul {
+    display: flex;
+    justify-content: space-between;
 }
 
-#news dd {
-    width: 80%;
-    border-bottom: 1px solid #c8c8c8;
-    padding: 15px;
+#achieve li {
+    width: 220px;
+    margin: 0 auto;
 }
+
+#achieve-list .school-name {
+    display: flex;
+    align-items: center;
+}
+
+.achieve-person .stamp {
+    width: 80px;
+    margin-right: -13%;
+    transform: rotate(-25deg);
+}
+
+.achieve-person h2 {
+    display: inline-block;
+    position: absolute;
+    mix-blend-mode: multiply;
+    text-align: center;
+    margin-left: 5%;
+    line-height: 1em;
+}
+
+.achieve-person .person-course {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px auto;
+}
+
+.achieve-person .btn {
+    border-radius: 100vh;
+    color: #fff;
+    background: #143694;
+    font-size: 0.7em;
+    padding: 5px 5px;
+}
+
+.achieve-person .comment {
+    font-size: 0.9em;
+    width: 220px;
+}
+
 
 /* contact */
-#contact p{
+
+#contact {
+    width: 65%;
+}
+
+#contact p {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#contact dl {
+#contact form {
+    text-align: center;
+}
+
+#contact .form-list {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
 }
 
 #contact dt {
-    width: 15%;
+    width: 100%;
+    text-align: left;
     margin-bottom: 10px;
 }
 
+#contact .name-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact #last_name {
+    margin-right: 4%;
+}
+
 #contact dd {
-    width: 85%;
+    width: 100%;
     margin-bottom: 10px;
 }
 
 #contact dd input,
 #contact dd textarea {
-    width: 100%;
+    width: calc(100% - 5px);
     border: 1px solid #c8c8c8;
     padding: 10px;
+    border-radius: 8px;
 }
 
 #contact dd textarea {
@@ -216,25 +335,50 @@ li {
 }
 
 #contact .button input {
-    border: 1px solid #24292e;
+    border: 1px solid #27257b;
     width: 200px;
     padding: 15px 0;
-    background-color: #24292e;
+    background-color: #27257b;
     color: #fff;
+    border-radius: 5px;
     transition: all 0.3s;
 }
 
 #contact .button input:hover {
     background-color: #fff;
-    color: #24292e;
+    color: #27257b;
 }
 
+#contact .hidden {
+    display: none;
+}
+
+
+/* footer */
+
+#footer {
+    height: 120px;
+    width: 100%;
+    background-color: #27257b;
+    color: #c8c8c8;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 5px 0;
+}
+
+#company {
+    font-size: 0.6em;
+}
+
+
 /* sp */
+
 @media screen and (max-width: 600px) {
     .site-title {
         margin-top: 20px;
     }
-
     /* header */
     #header {
         max-width: 100%;
@@ -243,21 +387,18 @@ li {
         line-height: 40px;
         margin-top: 20px;
     }
-
     #header li {
         font-size: 0.8rem;
         margin-left: 20px;
     }
-
     #header li img.icon {
         width: 20px;
         margin-top: 15px;
     }
     /* works */
     #works ul {
-        flex-direction: column;        
+        flex-direction: column;
     }
-
     #works ul li {
         width: 100%;
     }
@@ -265,28 +406,23 @@ li {
     #news dl {
         flex-direction: column;
     }
-
     #news dt {
         width: 100%;
         border-bottom: none;
         padding-bottom: 0;
     }
-
     #news dd {
         width: 100%;
         padding-top: 0;
     }
-
     /* contact */
     #contact dl {
         flex-direction: column;
     }
-
     #contact dt {
         width: 100%;
         margin-bottom: 5px;
     }
-
     #contact dd {
         width: 100%;
     }
